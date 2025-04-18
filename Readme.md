@@ -8,6 +8,17 @@ make     # build target executable cpp
 ./01pass_through # run 
 ```
 
+## todo
+- [x] Add filter methods
+- [ ] Add registration methods
+- [ ] Add small gicp methods
+- [ ] Add segmentation methods
+- [ ] Add transform for pcl
+- [ ] Add keypoints extract
+- [ ] Add feature descriptor
+- [ ] Add a script to automatically change the version of pcl
+
+
 ## **pcl filters**
 
 ### 1.pass through filter 
