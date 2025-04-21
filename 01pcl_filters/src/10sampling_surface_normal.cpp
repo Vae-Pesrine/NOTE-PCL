@@ -9,7 +9,7 @@
 #include <pcl/filters/sampling_surface_normal.h>
 #include <pcl/visualization/pcl_visualizer.h>
 
-#include "viewer.h"
+#include "func.hpp"
 
 int main ()
 { 

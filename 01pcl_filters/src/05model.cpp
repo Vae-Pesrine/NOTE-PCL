@@ -8,7 +8,7 @@
 #include <pcl/filters/model_outlier_removal.h>
 #include <pcl/visualization/pcl_visualizer.h>
 
-#include "viewer.h"
+#include "func.hpp"
 
 int main ()
 { 

@@ -8,7 +8,7 @@
 #include <pcl/filters/passthrough.h>
 #include <pcl/visualization/pcl_visualizer.h>
 
-#include "viewer.h"
+#include "func.hpp"
 
 int main ()
 { 

@@ -8,7 +8,7 @@
 #include <pcl/filters/radius_outlier_removal.h>
 #include <pcl/visualization/pcl_visualizer.h>
 
-#include "viewer.h"
+#include "func.hpp"
 
 int main ()
 { 
@@ -24,6 +24,7 @@ int main ()
     ror.setRadiusSearch(0.1);
     ror.setMinNeighborsInRadius(10);
     ror.filter(*cloud_filtered);
+    pcl::io::savePCDFileBinary("../../PCD/registration.pcd", *cloud_filtered);
 
     std::cout << "Cloud points before filtering: " << cloud->points.size() << std::endl;
     std::cout << "Cloud points after filtering: " << cloud_filtered->points.size()<< std::endl;

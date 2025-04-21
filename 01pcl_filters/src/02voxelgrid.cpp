@@ -7,7 +7,7 @@
 #include <pcl/filters/voxel_grid.h>
 #include <pcl/visualization/pcl_visualizer.h>
 
-#include "viewer.h"
+#include "func.hpp"
 
 int main ()
 { 
