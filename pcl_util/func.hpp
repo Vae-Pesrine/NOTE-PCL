@@ -2,15 +2,19 @@
 
 #include <thread>
 #include <chrono>
-#include <pcl/filters/voxel_grid.h>
-#include <pcl/visualization/pcl_visualizer.h>
+
 #include <pcl/point_types.h>
 #include <pcl/kdtree/kdtree_flann.h>
 #include <pcl/features/normal_3d_omp.h>
+#include <pcl/filters/filter.h>
+#include <pcl/filters/voxel_grid.h>
+#include <pcl/visualization/pcl_visualizer.h>
 
 template<typename PointT1, typename PointT2>
-void pcl_viewer_init(typename pcl::PointCloud<PointT1>::Ptr &cloud_1,
-                     typename pcl::PointCloud<PointT2>::Ptr &cloud_2) {
+void pcl_viewer_init(
+    typename pcl::PointCloud<PointT1>::Ptr &cloud_1,
+    typename pcl::PointCloud<PointT2>::Ptr &cloud_2
+) {
 
     auto view = std::make_shared<pcl::visualization::PCLVisualizer>("Show Cloud");
     int v1(0);
@@ -78,22 +82,27 @@ void pcl_viewer_init(
     }
 }
 
-void voxel_grid_filter(pcl::PointCloud<pcl::PointXYZ>::Ptr &cloud)
-{
-    auto cloud_filtered = std::make_shared<pcl::PointCloud<pcl::PointXYZ>>();
-    pcl::VoxelGrid<pcl::PointXYZ> vg;
-    vg.setInputCloud(cloud);
-    vg.setLeafSize(0.1f, 0.1f, 0.1f); 
-    vg.filter(*cloud_filtered);
-    cloud->clear();
-    *cloud = *cloud_filtered;
-}
+/**
+ * @brief remove nan and downsample the point cloud using voxel grid filter
+ */
+template<typename PointT>
+void voxel_grid_filter(typename pcl::PointCloud<PointT>::Ptr &cloud, float leaf_size) {
+    pcl::PointCloud<PointT> cloud_no_nan;
+    std::vector<int> indices;
+    pcl::removeNaNFromPointCloud(*cloud, cloud_no_nan, indices);
 
+    auto cloud_filtered = std::make_shared<pcl::PointCloud<PointT>>();
+    pcl::VoxelGrid<PointT> vg;
+    vg.setInputCloud(cloud_no_nan.makeShared());
+    vg.setLeafSize(leaf_size, leaf_size, leaf_size);
+    vg.filter(*cloud_filtered);
+
+    cloud = cloud_filtered;
+}
 /**
  * @brief compute the normals of point cloud and concatenate to the point cloud
  */
-void cloud_with_normal(pcl::PointCloud<pcl::PointXYZ>::Ptr &cloud, pcl::PointCloud<pcl::PointNormal>::Ptr &cloud_normal)
-{
+void cloud_with_normal(pcl::PointCloud<pcl::PointXYZ>::Ptr &cloud, pcl::PointCloud<pcl::PointNormal>::Ptr &cloud_normal){
     pcl::NormalEstimationOMP<pcl::PointXYZ, pcl::Normal> ne;
     auto normals = std::make_shared<pcl::PointCloud<pcl::Normal>>();
     auto tree = std::make_shared<pcl::search::KdTree<pcl::PointXYZ>>();

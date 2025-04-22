@@ -6,5 +6,5 @@ CXX_DEFINES = -DDISABLE_PCAP -DDISABLE_PNG -Dqh_QHpointer -DvtkRenderingCore_AUT
 
 CXX_INCLUDES = -I/home/jgy/NOTE-PCL/02pcl_registration/$(CMAKE_CURRENT_SOURCE_DIR)/../pcl_util -isystem /usr/include/vtk-7.1 -isystem /usr/include/freetype2 -isystem /usr/include/eigen3 -isystem /usr/local/include/pcl-1.12 -isystem /usr/include/ni -isystem /usr/include/openni2
 
-CXX_FLAGS = -msse4.2 -mfpmath=sse
+CXX_FLAGS =   -fopenmp -std=gnu++17 -msse4.2 -mfpmath=sse
 

@@ -1,4 +1,20 @@
-# <center>**Point Cloud Libraries**
+# <center>**Point Cloud Libraries**</center>
+
+<center>
+
+ ░░░░░░░░░░░░░░░░░░░░░░░░▄░░
+ ░░░░░░░░░▐█░░░░░░░░░░░▄▀▒▌░
+ ░░░░░░░░▐▀▒█░░░░░░░░▄▀▒▒▒▐
+ ░░░░░░░▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐
+ ░░░░░▄▄▀▒░▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐
+ ░░░▄▀▒▒▒░░░▒▒▒░░░▒▒▒▀██▀▒▌
+ ░░▐▒▒▒▄▄▒▒▒▒░░░▒▒▒▒▒▒▒▀▄▒▒
+ ░░▌░░▌█▀▒▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐
+ ░▐░░░▒▒▒▒▒▒▒▒▌██▀▒▒░░░▒▒▒▀▄
+ ░▌░▒▄██▄▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒
+ ▀▒▀▐▄█▄█▌▄░▀▒▒░░░░░░░░░░▒▒▒
+ 
+</center> 
 
 ## Make and run
 ```SHELL
@@ -12,7 +28,7 @@ make     # build target executable cpp
 ## Todo
 - [x] Add filter methods
 - [ ] Add registration methods
-- [ ] Add small gicp methods
+- [x] Add small gicp methods
 - [ ] Add segmentation methods
 - [ ] Add transform for pcl
 - [ ] Add keypoints extract
@@ -144,33 +160,69 @@ Code [11crop_box.cpp](01pcl_filters/src//11crop_box.cpp)
 ## **Point cloud registration**
 - I used English for the convenience of writing formulas.
 
-### 1. ICP registration
+### 1. ICP precise registration
 - Registration process: ICP iteratively corrects the rigid transformation(translation, rotation, etc.) between two original point clouds to minimize the distance between all point sets.
-  - Input: Two frames od raw point cloud, initial estimation od transformation, and the criterion for stopping iteration.
+  - Input: Two frames of raw point cloud, initial estimation of transformation, and the criterion for stopping iteration.
   - Output: Transformation matrix and the corrected point cloud after transformation. 
   
 - ICP algorithm steps：
   - Apply the initial transformation $T_0$ to each point $P_{ai}$ in the point set $A$ to obtain $P_{ai'}$ 
-  - Find the point $P_{bi}$ that is closest to point $P_{ai'}$ from point set $B$ to fform the corresponding point pair
+  - Find the point $P_{bi}$ that is closest to point $P_{ai'}$ from point set $B$ to form the corresponding point pair
   - Solve for the optimal transformation $\Delta T$ 
   
-  $$\Delta T = arg \min_{R, t} \sum_{i=1}^{n} ||P_{bi} - (RP_{ai'}+t)||^2$$
+  $$
+  \Delta T = arg \min_{R, t} \sum_{i=1}^{n} ||P_{bi} - (RP_{ai'}+t)||^2
+  $$
 
-- Detemine whether it coverages based on the errors of the two iterations, the number of iterations, and the conditons, etc. If it coverages, output the final result $T=\Delta T * T_0$; otherwise, $T_0=\Delta T * T_0$. Then repeat the firse step. 
+- Determine whether it coverages based on the errors of the two iterations, the number of iterations, and the conditons, etc. If it coverages, output the final result $T=\Delta T * T_0$; otherwise, $T_0=\Delta T * T_0$. Then repeat the first step. 
 
 - [Algorithm derivation](https://yilingui.xyz/2019/11/20/191120_point_cloud_registration_icp/)
 
 - Code：[01icp.cpp](02pcl_registration/src/01icp.cpp)
 
-- KD-tree optimization:Construct a KD-tree to implement the nearest neighbor algorithm and conduce nearest neighbor search on the points after coarse registration. The Euclidean distance is used as a judgement standard, the registration key points with the Euckidean larger than threshold value are eliminated, and the points with high registration precision are saved.(Just understand [KD-tree theory](https://www.cnblogs.com/eyeszjwang/articles/2429382.html))
+- KD-tree optimization:Construct a KD-tree to implement the nearest neighbor algorithm and conduct nearest neighbor search on the points after coarse registration. The Euclidean distance is used as a judgement standard, the registration key points with the Euclidean larger than threshold value are eliminated, and the points with high registration precision are saved.(Just understand [KD-tree theory](https://www.cnblogs.com/eyeszjwang/articles/2429382.html))
 
 - Bidirectional KD-tree optimized ICP
   - a. Respectively constructing KD-trees of $P$ and $Q$ point cloud.
   - b. Search the nearest point $Q_i$ of $P_i$ in the point set $Q$.
   - c. If the closest point of $Q_i$ is $P_i$ within point set $P$, so $P_i$ and $Q_i$ is a point pair. Otherwise, goes for $Q_{i+1}$.
   - Traverse the points in the point set $P$.
-  - Code: [01kd_icp.cpp](02pcl_registration/src/01kd_icp.cpp)
-- Point-To-Plane ICP: The traditional ICP algorithm uses the minimum distance between the corresponding points of the source point cloud and the target point cloud as the registration criterion. But Point-To-Plane takes minimizing the distance between source point cloud and the plane of the corresponding point in the target point cloud as criterion. Compared with ICP, it can better reflect the spatial structure of the point cloud
-, better resist to incorrect point pair. And its iteration speed is faster. Code: [02plane_icp.cpp](02pcl_registration/src/01plane_icp.cpp)
-![alt text](picture/point_to_point.jpg)
-![alt text](picture/point_to_plane.jpg)
+  - Code: [01kd_icp.cpp](02pcl_registration/src/01kd_icp.cpp) The align function would apply the transform to the source point cloud.
+    ```c++
+    icp.align(*icp_cloud, init_transform); 
+    ```
+- Point-To-Plane ICP: The traditional ICP algorithm uses the minimum distance between the corresponding points of the source point cloud and the target point cloud as the registration criterion. But Point-To-Plane takes minimizing the distance between source point cloud and the plane of the corresponding point in the target point cloud as criterion. Compared with ICP, it can better reflect the spatial structure of the point cloud, better resist to incorrect point pair. And its iteration speed is faster. Code: [01plane_icp.cpp](02pcl_registration/src/01plane_icp.cpp)
+
+<center>
+
+ ![alt text](picture/point_to_point.jpg#pic_center)
+ Point-To-Point ICP
+ ![alt text](picture/point_to_plane.jpg#pic_center)
+ Point-To-Plane ICP
+
+</center>
+
+- Point-To-Plane GICP: The advanced variant of the ICP algorithm is designed to improve the accuracy and the robustness of point cloud alignment by considering the covariance matrix of point distributions instead of individual point positions, especially when dealing with noisy or sparse point. GICP uses a probabilistic framework to estimate the optimal transformation. This is done by minimizing a cost function that considers the Mahalanobis distance between the distrubutions.
+  - Code: [02kd_gicp.cpp](02pcl_registration/src//02kd_gicp.cpp)
+  - Mahalanobis distance($\mu$ is mean of vector x and the $\sum$ is the covariance matrix of vector x)
+  
+    $$
+    D_M(x, \mu) = \sqrt{(x-\mu)^T \sum{}^{-1} (x-\mu)}
+    $$
+  - [Algorithm derivation](https://blog.csdn.net/qq_36812406/article/details/146203885)
+
+
+### 2. NDT precise registration
+
+### 3. Corase registration
+
+- sac-ia
+- sca-pj
+- fpcs
+- kfpcs
+
+
+### 4. The small gicp library
+
+[small gicp.cpp](02pcl_registration/src/05basic_registration_pcl.cpp)
+

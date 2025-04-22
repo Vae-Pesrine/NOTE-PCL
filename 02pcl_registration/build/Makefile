@@ -155,6 +155,84 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/01plane_icp.dir/build.make CMakeFiles/01plane_icp.dir/build
 .PHONY : 01plane_icp/fast
 
+#=============================================================================
+# Target rules for targets named 02kd_gicp
+
+# Build rule for target.
+02kd_gicp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 02kd_gicp
+.PHONY : 02kd_gicp
+
+# fast build rule for target.
+02kd_gicp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/02kd_gicp.dir/build.make CMakeFiles/02kd_gicp.dir/build
+.PHONY : 02kd_gicp/fast
+
+#=============================================================================
+# Target rules for targets named 03sac_ia
+
+# Build rule for target.
+03sac_ia: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 03sac_ia
+.PHONY : 03sac_ia
+
+# fast build rule for target.
+03sac_ia/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/03sac_ia.dir/build.make CMakeFiles/03sac_ia.dir/build
+.PHONY : 03sac_ia/fast
+
+#=============================================================================
+# Target rules for targets named 03sac_pj
+
+# Build rule for target.
+03sac_pj: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 03sac_pj
+.PHONY : 03sac_pj
+
+# fast build rule for target.
+03sac_pj/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/03sac_pj.dir/build.make CMakeFiles/03sac_pj.dir/build
+.PHONY : 03sac_pj/fast
+
+#=============================================================================
+# Target rules for targets named 04fpcs
+
+# Build rule for target.
+04fpcs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 04fpcs
+.PHONY : 04fpcs
+
+# fast build rule for target.
+04fpcs/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/04fpcs.dir/build.make CMakeFiles/04fpcs.dir/build
+.PHONY : 04fpcs/fast
+
+#=============================================================================
+# Target rules for targets named 04kfpcs
+
+# Build rule for target.
+04kfpcs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 04kfpcs
+.PHONY : 04kfpcs
+
+# fast build rule for target.
+04kfpcs/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/04kfpcs.dir/build.make CMakeFiles/04kfpcs.dir/build
+.PHONY : 04kfpcs/fast
+
+#=============================================================================
+# Target rules for targets named 05basic_registration_pcl
+
+# Build rule for target.
+05basic_registration_pcl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 05basic_registration_pcl
+.PHONY : 05basic_registration_pcl
+
+# fast build rule for target.
+05basic_registration_pcl/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/05basic_registration_pcl.dir/build.make CMakeFiles/05basic_registration_pcl.dir/build
+.PHONY : 05basic_registration_pcl/fast
+
 src/01icp.o: src/01icp.cpp.o
 .PHONY : src/01icp.o
 
@@ -227,6 +305,150 @@ src/01plane_icp.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/01plane_icp.dir/build.make CMakeFiles/01plane_icp.dir/src/01plane_icp.cpp.s
 .PHONY : src/01plane_icp.cpp.s
 
+src/02kd_gicp.o: src/02kd_gicp.cpp.o
+.PHONY : src/02kd_gicp.o
+
+# target to build an object file
+src/02kd_gicp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/02kd_gicp.dir/build.make CMakeFiles/02kd_gicp.dir/src/02kd_gicp.cpp.o
+.PHONY : src/02kd_gicp.cpp.o
+
+src/02kd_gicp.i: src/02kd_gicp.cpp.i
+.PHONY : src/02kd_gicp.i
+
+# target to preprocess a source file
+src/02kd_gicp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/02kd_gicp.dir/build.make CMakeFiles/02kd_gicp.dir/src/02kd_gicp.cpp.i
+.PHONY : src/02kd_gicp.cpp.i
+
+src/02kd_gicp.s: src/02kd_gicp.cpp.s
+.PHONY : src/02kd_gicp.s
+
+# target to generate assembly for a file
+src/02kd_gicp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/02kd_gicp.dir/build.make CMakeFiles/02kd_gicp.dir/src/02kd_gicp.cpp.s
+.PHONY : src/02kd_gicp.cpp.s
+
+src/03sac_ia.o: src/03sac_ia.cpp.o
+.PHONY : src/03sac_ia.o
+
+# target to build an object file
+src/03sac_ia.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/03sac_ia.dir/build.make CMakeFiles/03sac_ia.dir/src/03sac_ia.cpp.o
+.PHONY : src/03sac_ia.cpp.o
+
+src/03sac_ia.i: src/03sac_ia.cpp.i
+.PHONY : src/03sac_ia.i
+
+# target to preprocess a source file
+src/03sac_ia.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/03sac_ia.dir/build.make CMakeFiles/03sac_ia.dir/src/03sac_ia.cpp.i
+.PHONY : src/03sac_ia.cpp.i
+
+src/03sac_ia.s: src/03sac_ia.cpp.s
+.PHONY : src/03sac_ia.s
+
+# target to generate assembly for a file
+src/03sac_ia.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/03sac_ia.dir/build.make CMakeFiles/03sac_ia.dir/src/03sac_ia.cpp.s
+.PHONY : src/03sac_ia.cpp.s
+
+src/03sac_pj.o: src/03sac_pj.cpp.o
+.PHONY : src/03sac_pj.o
+
+# target to build an object file
+src/03sac_pj.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/03sac_pj.dir/build.make CMakeFiles/03sac_pj.dir/src/03sac_pj.cpp.o
+.PHONY : src/03sac_pj.cpp.o
+
+src/03sac_pj.i: src/03sac_pj.cpp.i
+.PHONY : src/03sac_pj.i
+
+# target to preprocess a source file
+src/03sac_pj.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/03sac_pj.dir/build.make CMakeFiles/03sac_pj.dir/src/03sac_pj.cpp.i
+.PHONY : src/03sac_pj.cpp.i
+
+src/03sac_pj.s: src/03sac_pj.cpp.s
+.PHONY : src/03sac_pj.s
+
+# target to generate assembly for a file
+src/03sac_pj.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/03sac_pj.dir/build.make CMakeFiles/03sac_pj.dir/src/03sac_pj.cpp.s
+.PHONY : src/03sac_pj.cpp.s
+
+src/04fpcs.o: src/04fpcs.cpp.o
+.PHONY : src/04fpcs.o
+
+# target to build an object file
+src/04fpcs.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/04fpcs.dir/build.make CMakeFiles/04fpcs.dir/src/04fpcs.cpp.o
+.PHONY : src/04fpcs.cpp.o
+
+src/04fpcs.i: src/04fpcs.cpp.i
+.PHONY : src/04fpcs.i
+
+# target to preprocess a source file
+src/04fpcs.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/04fpcs.dir/build.make CMakeFiles/04fpcs.dir/src/04fpcs.cpp.i
+.PHONY : src/04fpcs.cpp.i
+
+src/04fpcs.s: src/04fpcs.cpp.s
+.PHONY : src/04fpcs.s
+
+# target to generate assembly for a file
+src/04fpcs.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/04fpcs.dir/build.make CMakeFiles/04fpcs.dir/src/04fpcs.cpp.s
+.PHONY : src/04fpcs.cpp.s
+
+src/04kfpcs.o: src/04kfpcs.cpp.o
+.PHONY : src/04kfpcs.o
+
+# target to build an object file
+src/04kfpcs.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/04kfpcs.dir/build.make CMakeFiles/04kfpcs.dir/src/04kfpcs.cpp.o
+.PHONY : src/04kfpcs.cpp.o
+
+src/04kfpcs.i: src/04kfpcs.cpp.i
+.PHONY : src/04kfpcs.i
+
+# target to preprocess a source file
+src/04kfpcs.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/04kfpcs.dir/build.make CMakeFiles/04kfpcs.dir/src/04kfpcs.cpp.i
+.PHONY : src/04kfpcs.cpp.i
+
+src/04kfpcs.s: src/04kfpcs.cpp.s
+.PHONY : src/04kfpcs.s
+
+# target to generate assembly for a file
+src/04kfpcs.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/04kfpcs.dir/build.make CMakeFiles/04kfpcs.dir/src/04kfpcs.cpp.s
+.PHONY : src/04kfpcs.cpp.s
+
+src/05basic_registration_pcl.o: src/05basic_registration_pcl.cpp.o
+.PHONY : src/05basic_registration_pcl.o
+
+# target to build an object file
+src/05basic_registration_pcl.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/05basic_registration_pcl.dir/build.make CMakeFiles/05basic_registration_pcl.dir/src/05basic_registration_pcl.cpp.o
+.PHONY : src/05basic_registration_pcl.cpp.o
+
+src/05basic_registration_pcl.i: src/05basic_registration_pcl.cpp.i
+.PHONY : src/05basic_registration_pcl.i
+
+# target to preprocess a source file
+src/05basic_registration_pcl.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/05basic_registration_pcl.dir/build.make CMakeFiles/05basic_registration_pcl.dir/src/05basic_registration_pcl.cpp.i
+.PHONY : src/05basic_registration_pcl.cpp.i
+
+src/05basic_registration_pcl.s: src/05basic_registration_pcl.cpp.s
+.PHONY : src/05basic_registration_pcl.s
+
+# target to generate assembly for a file
+src/05basic_registration_pcl.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/05basic_registration_pcl.dir/build.make CMakeFiles/05basic_registration_pcl.dir/src/05basic_registration_pcl.cpp.s
+.PHONY : src/05basic_registration_pcl.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -238,6 +460,12 @@ help:
 	@echo "... 01icp"
 	@echo "... 01kd_icp"
 	@echo "... 01plane_icp"
+	@echo "... 02kd_gicp"
+	@echo "... 03sac_ia"
+	@echo "... 03sac_pj"
+	@echo "... 04fpcs"
+	@echo "... 04kfpcs"
+	@echo "... 05basic_registration_pcl"
 	@echo "... src/01icp.o"
 	@echo "... src/01icp.i"
 	@echo "... src/01icp.s"
@@ -247,6 +475,24 @@ help:
 	@echo "... src/01plane_icp.o"
 	@echo "... src/01plane_icp.i"
 	@echo "... src/01plane_icp.s"
+	@echo "... src/02kd_gicp.o"
+	@echo "... src/02kd_gicp.i"
+	@echo "... src/02kd_gicp.s"
+	@echo "... src/03sac_ia.o"
+	@echo "... src/03sac_ia.i"
+	@echo "... src/03sac_ia.s"
+	@echo "... src/03sac_pj.o"
+	@echo "... src/03sac_pj.i"
+	@echo "... src/03sac_pj.s"
+	@echo "... src/04fpcs.o"
+	@echo "... src/04fpcs.i"
+	@echo "... src/04fpcs.s"
+	@echo "... src/04kfpcs.o"
+	@echo "... src/04kfpcs.i"
+	@echo "... src/04kfpcs.s"
+	@echo "... src/05basic_registration_pcl.o"
+	@echo "... src/05basic_registration_pcl.i"
+	@echo "... src/05basic_registration_pcl.s"
 .PHONY : help
 
 

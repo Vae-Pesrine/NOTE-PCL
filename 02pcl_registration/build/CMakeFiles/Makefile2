@@ -66,6 +66,12 @@ CMAKE_BINARY_DIR = /home/jgy/NOTE-PCL/02pcl_registration/build
 all: CMakeFiles/01icp.dir/all
 all: CMakeFiles/01kd_icp.dir/all
 all: CMakeFiles/01plane_icp.dir/all
+all: CMakeFiles/02kd_gicp.dir/all
+all: CMakeFiles/03sac_ia.dir/all
+all: CMakeFiles/03sac_pj.dir/all
+all: CMakeFiles/04fpcs.dir/all
+all: CMakeFiles/04kfpcs.dir/all
+all: CMakeFiles/05basic_registration_pcl.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -76,6 +82,12 @@ preinstall:
 clean: CMakeFiles/01icp.dir/clean
 clean: CMakeFiles/01kd_icp.dir/clean
 clean: CMakeFiles/01plane_icp.dir/clean
+clean: CMakeFiles/02kd_gicp.dir/clean
+clean: CMakeFiles/03sac_ia.dir/clean
+clean: CMakeFiles/03sac_pj.dir/clean
+clean: CMakeFiles/04fpcs.dir/clean
+clean: CMakeFiles/04kfpcs.dir/clean
+clean: CMakeFiles/05basic_registration_pcl.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -155,6 +167,162 @@ CMakeFiles/01plane_icp.dir/rule: cmake_check_build_system
 CMakeFiles/01plane_icp.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/01plane_icp.dir/build.make CMakeFiles/01plane_icp.dir/clean
 .PHONY : CMakeFiles/01plane_icp.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/02kd_gicp.dir
+
+# All Build rule for target.
+CMakeFiles/02kd_gicp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/02kd_gicp.dir/build.make CMakeFiles/02kd_gicp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/02kd_gicp.dir/build.make CMakeFiles/02kd_gicp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jgy/NOTE-PCL/02pcl_registration/build/CMakeFiles --progress-num=7,8 "Built target 02kd_gicp"
+.PHONY : CMakeFiles/02kd_gicp.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/02kd_gicp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jgy/NOTE-PCL/02pcl_registration/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/02kd_gicp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jgy/NOTE-PCL/02pcl_registration/build/CMakeFiles 0
+.PHONY : CMakeFiles/02kd_gicp.dir/rule
+
+# Convenience name for target.
+02kd_gicp: CMakeFiles/02kd_gicp.dir/rule
+.PHONY : 02kd_gicp
+
+# clean rule for target.
+CMakeFiles/02kd_gicp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/02kd_gicp.dir/build.make CMakeFiles/02kd_gicp.dir/clean
+.PHONY : CMakeFiles/02kd_gicp.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/03sac_ia.dir
+
+# All Build rule for target.
+CMakeFiles/03sac_ia.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/03sac_ia.dir/build.make CMakeFiles/03sac_ia.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/03sac_ia.dir/build.make CMakeFiles/03sac_ia.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jgy/NOTE-PCL/02pcl_registration/build/CMakeFiles --progress-num=9,10 "Built target 03sac_ia"
+.PHONY : CMakeFiles/03sac_ia.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/03sac_ia.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jgy/NOTE-PCL/02pcl_registration/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/03sac_ia.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jgy/NOTE-PCL/02pcl_registration/build/CMakeFiles 0
+.PHONY : CMakeFiles/03sac_ia.dir/rule
+
+# Convenience name for target.
+03sac_ia: CMakeFiles/03sac_ia.dir/rule
+.PHONY : 03sac_ia
+
+# clean rule for target.
+CMakeFiles/03sac_ia.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/03sac_ia.dir/build.make CMakeFiles/03sac_ia.dir/clean
+.PHONY : CMakeFiles/03sac_ia.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/03sac_pj.dir
+
+# All Build rule for target.
+CMakeFiles/03sac_pj.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/03sac_pj.dir/build.make CMakeFiles/03sac_pj.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/03sac_pj.dir/build.make CMakeFiles/03sac_pj.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jgy/NOTE-PCL/02pcl_registration/build/CMakeFiles --progress-num=11,12 "Built target 03sac_pj"
+.PHONY : CMakeFiles/03sac_pj.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/03sac_pj.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jgy/NOTE-PCL/02pcl_registration/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/03sac_pj.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jgy/NOTE-PCL/02pcl_registration/build/CMakeFiles 0
+.PHONY : CMakeFiles/03sac_pj.dir/rule
+
+# Convenience name for target.
+03sac_pj: CMakeFiles/03sac_pj.dir/rule
+.PHONY : 03sac_pj
+
+# clean rule for target.
+CMakeFiles/03sac_pj.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/03sac_pj.dir/build.make CMakeFiles/03sac_pj.dir/clean
+.PHONY : CMakeFiles/03sac_pj.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/04fpcs.dir
+
+# All Build rule for target.
+CMakeFiles/04fpcs.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/04fpcs.dir/build.make CMakeFiles/04fpcs.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/04fpcs.dir/build.make CMakeFiles/04fpcs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jgy/NOTE-PCL/02pcl_registration/build/CMakeFiles --progress-num=13,14 "Built target 04fpcs"
+.PHONY : CMakeFiles/04fpcs.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/04fpcs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jgy/NOTE-PCL/02pcl_registration/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/04fpcs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jgy/NOTE-PCL/02pcl_registration/build/CMakeFiles 0
+.PHONY : CMakeFiles/04fpcs.dir/rule
+
+# Convenience name for target.
+04fpcs: CMakeFiles/04fpcs.dir/rule
+.PHONY : 04fpcs
+
+# clean rule for target.
+CMakeFiles/04fpcs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/04fpcs.dir/build.make CMakeFiles/04fpcs.dir/clean
+.PHONY : CMakeFiles/04fpcs.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/04kfpcs.dir
+
+# All Build rule for target.
+CMakeFiles/04kfpcs.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/04kfpcs.dir/build.make CMakeFiles/04kfpcs.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/04kfpcs.dir/build.make CMakeFiles/04kfpcs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jgy/NOTE-PCL/02pcl_registration/build/CMakeFiles --progress-num=15,16 "Built target 04kfpcs"
+.PHONY : CMakeFiles/04kfpcs.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/04kfpcs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jgy/NOTE-PCL/02pcl_registration/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/04kfpcs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jgy/NOTE-PCL/02pcl_registration/build/CMakeFiles 0
+.PHONY : CMakeFiles/04kfpcs.dir/rule
+
+# Convenience name for target.
+04kfpcs: CMakeFiles/04kfpcs.dir/rule
+.PHONY : 04kfpcs
+
+# clean rule for target.
+CMakeFiles/04kfpcs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/04kfpcs.dir/build.make CMakeFiles/04kfpcs.dir/clean
+.PHONY : CMakeFiles/04kfpcs.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/05basic_registration_pcl.dir
+
+# All Build rule for target.
+CMakeFiles/05basic_registration_pcl.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/05basic_registration_pcl.dir/build.make CMakeFiles/05basic_registration_pcl.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/05basic_registration_pcl.dir/build.make CMakeFiles/05basic_registration_pcl.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jgy/NOTE-PCL/02pcl_registration/build/CMakeFiles --progress-num=17,18 "Built target 05basic_registration_pcl"
+.PHONY : CMakeFiles/05basic_registration_pcl.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/05basic_registration_pcl.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jgy/NOTE-PCL/02pcl_registration/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/05basic_registration_pcl.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jgy/NOTE-PCL/02pcl_registration/build/CMakeFiles 0
+.PHONY : CMakeFiles/05basic_registration_pcl.dir/rule
+
+# Convenience name for target.
+05basic_registration_pcl: CMakeFiles/05basic_registration_pcl.dir/rule
+.PHONY : 05basic_registration_pcl
+
+# clean rule for target.
+CMakeFiles/05basic_registration_pcl.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/05basic_registration_pcl.dir/build.make CMakeFiles/05basic_registration_pcl.dir/clean
+.PHONY : CMakeFiles/05basic_registration_pcl.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
