@@ -1,3 +1,4 @@
 01pcl_filters/build/*
+02pcl_registration/build/*
 util/*
 .vscode/*
